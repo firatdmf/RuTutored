@@ -1,0 +1,3 @@
+Questions set
+Error messages in signup page
+Directly log in the user after they sign up and give them a confirmation message as well as an email

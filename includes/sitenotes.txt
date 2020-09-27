@@ -1,0 +1,37 @@
+An url can contain one of these 84 characters
+
+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-._~:/?#[]@!$&'()*+,;=
+
+
+
+document.querySelector(".tutee-span").addEventListener("click",function(){
+  document.querySelector(".tutee-span").style.background="white";
+  document.querySelector(".tutee-span").style.color="rgb(147,38,38)";
+
+  document.querySelector(".tutor-span").style.background="rgb(211,204,189)";
+  document.querySelector(".tutor-span").style.color="white";
+
+  document.querySelector(".faculty-span").style.background="rgb(211,204,189)";
+  document.querySelector(".faculty-span").style.color="white";
+
+  document.getElementById("tutor-form").style.display="none";
+  document.getElementById("faculty-form").style.display="none";
+  document.getElementById("tutee-form").style.display="flex";
+
+  document.querySelector(".background").style.height="650px";
+  document.querySelector(".right").style.height="650px";
+  document.querySelector(".left").style.height="650px";
+
+  document.querySelector(".tutee-image").style.display="flex";
+  document.querySelector(".tutor-image").style.display="none";
+  document.querySelector(".faculty-image").style.display="none";
+
+  document.getElementById("pleaseSelect").style.display="none";
+  document.getElementById("fac-msg").style.display="none";
+
+}
+
+
+
+
+what is asset in PHP and what does it do?

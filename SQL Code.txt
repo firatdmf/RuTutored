@@ -1,0 +1,94 @@
+
+<-- Creating a table in SQL -->
+
+create table posts (
+    id int(11) not null PRIMARY KEY AUTO_INCREMENT,
+    subject varchar(128) not null,
+    content varchar(1000) not null,
+    date datetime not null
+);
+
+-------------------------------------------------------------------------------------
+<-- Inserting a data into your table --> 
+
+
+insert into posts (subject, content, date) VALUES ('This is the subject','This is content','2020-5-28 15:07:01');
+
+
+-------------------------------------------------------------------------------------
+
+<-- Updating a data in the table -->
+
+UPDATE posts 
+SET subject='This is a test', content='This is the content'
+WHERE id='1'
+
+-------------------------------------------------------------------------------------
+
+<-- Deleting a data from the table -->
+
+DELETE FROM posts
+WHERE id='1'
+
+-------------------------------------------------------------------------------------
+
+<-- set data in the table in order -->
+
+SELECT * FROM posts ORDER BY id ASC // OR DESC
+
+-------------------------------------------------------------------------------------
+
+
+USERDATABASE LECTURE 37 CODE 
+
+<-- Creating table called users --->
+
+CREATE TABLE users (
+user_id int(11) AUTO_INCREMENT PRIMARY KEY not null,
+user_first varchar(256) not null,
+user_last varchar(256) not null,
+user_email varchar(256) not null,
+user_uid varchar(256) not null,
+user_pwd varchar(256) not null
+);
+
+<-- Inserting data into your table --> Just a quick note: id is auto incremented itself so we do not need to insert that.
+
+INSERT INTO users(user_first, user_last, user_email, user_uid, user_pwd)
+	VALUES('Daniel','Nielse','usemmtuts@gmail.com','Admin','test123');
+
+
+
+-------------------------------------------------------------------------------------
+
+RU Tutored database adjustment
+
+ALTER TABLE users MODIFY sex varchar(50) null;
+ALTER TABLE users MODIFY ruid varchar(50) null;
+ALTER TABLE users MODIFY class varchar(50) null;
+ALTER TABLE users MODIFY credits varchar(50) null;
+ALTER TABLE users MODIFY major varchar(50) null;
+ALTER TABLE users MODIFY phone varchar(50) null;
+ALTER TABLE users MODIFY eoProgram varchar(50) null;
+ALTER TABLE users MODIFY type varchar(50) null;
+
+-------------------------------------------------------------------------------------
+
+CREATE TABLE users (
+user_id int(11) AUTO_INCREMENT PRIMARY KEY not null,
+firstName varchar(256) not null,
+lastName varchar(256) not null,
+sex varchar(50) null,
+username varchar(256) not null,
+hashedPwd varchar(256) not null,
+email varchar(256) not null,
+ruid varchar(50) null,
+class varchar(50) null,
+credits varchar(50) null,
+major varchar(50) null,
+phone varchar(50) null,
+eoProgram varchar(50) null,
+type varchar(50) null,
+Monday varchar(250) null
+
+);

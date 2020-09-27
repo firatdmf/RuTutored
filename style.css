@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap");
+
+
+/*This makes sure the website components cover all of the user's browser screen.*/
+* {
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+                                                              /*Header*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+/*Below is the positioning the header that consists of two logos and login/logout buttons.*/
+.header {
+  width: 100%;
+  height:70px;
+  background: white;
+}
+
+/*Below is the styling for the logo on the left.*/
+.header .logoText {
+  height:60px; 
+  width:auto;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+/*Below is the styling for the logo on the right.*/
+.header .logo {
+  height:60px; 
+  width:auto;
+  margin-top: 5px;
+  float: right;
+}
+
+
+/*Below is the styling for the Login button inside the header.*/
+.header .loginButton,.header .logoutButton{
+
+  /*Positioning*/
+  float:right;
+  margin-right: 10px;
+  margin-top: 15px;
+  padding: 5px 10px 5px 10px;
+
+  font-size:20px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: black;
+  background-color: white;
+  border: 2px solid #932626;
+
+  /*makes the corners rounded*/
+  border-radius: 4px; 
+}
+
+/*Below is the styling for the Logout button inside the header.*/
+.header .logoutButton-form{
+	display: none;
+}
+
+
+/*Styling when the user hovers their cursor on the Login and Logout buttons inside the header.*/
+.header .loginButton:hover, .header .logoutButton:hover,.inside-netid-login-button:hover {
+  background-color: #932626;
+  color:white;
+  border: 2px solid black;
+  cursor: pointer;
+  transition: 0.4s;
+
+}
+
+                                                          /*Navigation Bar*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+/*
+.navbar {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(211,204,189);
+  border-radius: 0px 0px 30px 30px;
+
+}
+
+
+.menufirst:not(.userDisplay) {
+  float:left;
+  display:inline-block;
+  list-style: none;
+  text-decoration:none;
+  border-radius:5px;
+  margin:20px 0px 20px 0px;
+}
+
+.userDisplay {
+  float:right;
+}
+
+.navbar a {
+  transition: 0.4s;
+	text-decoration:none;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  font-weight: bold;
+	color:black;
+  padding: 20px 20px 20px 20px;
+  font-size:102%;
+
+}
+
+.navbar a:hover, .navbar a.active {
+  background-color: #18A0C7;
+  color:white;
+}
+
+*/
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+/* Style the navbar */
+.navbar {
+  overflow: hidden;
+  background-color: rgb(211,204,189);
+  border-radius: 0px 0px 30px 30px;
+
+}
+
+/* Navbar links */
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+
+/* Navbar links on mouse-over */
+.navbar a:hover {
+  background-color: #932626;
+  color: white;
+  transition: 0.4s;
+}
+
+/* Active/current link */
+/* .topnav a.active {
+  background-color: #2196F3;
+  color: white;
+} */
+
+/* Style the input container */
+.navbar .userDisplay {
+  float: right;
+  margin-right:15px;
+  margin-top: 10px;
+  font-size:15px;
+  text-align: right;
+  user-select: none;
+}
+
+/* Add responsiveness - On small screens, display the navbar vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .navbar .userDisplay {
+    float: none;
+  }
+  .navbar a,{
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+}
+
+/*-----------------------------------------------------------------------------------------------------------------------*/
+
+.inside-login-button,.inside-signup-button {
+	background: #fff;
+	padding: 5px 15px;
+	color: #34495e;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-size:18px;
+	border-radius: 5px;
+/*	box-shadow: 6px 6px 29px -4px rgba(0,0,0,0.75);*/
+	margin-top:5px;
+	text-decoration: none;
+	transition:0.4s;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.inside-netid-login-button {
+  margin-top: 10px;
+  padding: 5px 15px;
+
+  font-size:18px;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+  color: black;
+  background-color: white;
+  text-decoration: none;
+  border: 2px solid #932626;
+
+  /*makes the corners rounded*/
+  border-radius: 4px;
+
+}
+
+.inside-netid-login-button:hover {
+  cursor: pointer;
+}
+
+.already-account {
+  margin-top: 30px;
+}
+
+.inside-login-button:hover, .inside-signup-button:hover {
+	background: #34495e;
+	color: #fff;
+  cursor: pointer;
+}
+
+
+
+.popup-login{
+  background: rgba(0,0,0,0.6);
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+
+.popup-login-content {
+  background-color: rgba(211,204,189,0.6);
+  height:550px;
+  width:350px;
+  background:#fff;
+  padding:20px;
+  border-radius:5px;
+  position:relative;
+  transition: 0.4s;
+}
+
+.no-account {
+  margin-top: 30px;
+}
+
+.forgot-password {
+  margin-bottom: 10px;
+  color: rgb(0,0,0,0.6);
+}
+
+.popup-signup {
+  background: rgba(0,0,0,0.6);
+  width:100%;
+  height:100%;
+  position:absolute;
+  top:0;
+  display:none;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+
+.popup-signup-content {
+  height:500px;
+  width:350px;
+  background:#fff;
+  padding:20px;
+  border-radius:5px;
+  position:relative;
+}
+
+
+
+.stack-buttons {
+	display:flex;
+	flex-direction: column;
+	width: 50%;
+	margin:0 auto;
+}
+
+.popup-login input, .popup-signup input{
+  margin:20px auto;
+  display:block;
+  width:50%;
+  padding:8px;
+  border: 1px solid gray;
+}
+
+.close,.close2{
+  position:absolute;
+  top:-15px;
+  right:-15px;
+  background:#fff;
+  height:20px;
+  width:20px;
+  border-radius:50%;
+  box-shadow: 6px 6px 29px -4px rgb(0,0,0,0.75);
+  cursor:pointer;
+}
+
+.inside-logo {
+	height:100px;
+  margin-bottom: 0px;
+}
+
+.inside-logo:hover{
+  opacity: 0.9;
+}
+
+.close:hover {
+  opacity: 0.7;
+}
+
+.signuperror {
+  color:red;
+}#id {}
+
+.empty-indicator {
+  display:none;
+}
+
+.errorMsg {
+	color: red;
+  margin-top: 10px;
+}
+
+.successMsg {
+  color:green;
+  margin-top: 10px;
+}
+
+                                                              /*Body*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+body {
+  background-image: url('img/books-trans3.png');
+  /*background: white;*/
+}
+
+#physics-quiz {
+  margin-top: 20px;
+}
+
+
+
+
+                                                              /*LOGIN FORM STYLING*/
+/*------------------------------------------------------------------------------------------------------------------------------*/
+
+.loginInput1,.loginInput2 {
+  width: 50%;
+  position: relative;
+  height: 70px;
+  overflow: hidden;
+  margin-left: 77px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+.loginInput1 input,.loginInput2 input {
+  width: 100%;
+  height: 100%;
+  color: black;
+  padding-top: 0px;
+  border: none;
+  outline: none;
+  font-size:16px;
+}
+
+.loginInput1 label,.loginInput2 label {
+  position: absolute;
+  bottom: 0px;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  border-bottom: 1px solid black;
+  color: rgba(0,0,0,0.7);
+}
+
+
+.loginInput1 label::after,.loginInput2 label::after {
+  content: "";
+  position: absolute;
+  left: -1px;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+  border-bottom: 1.3px solid #932626;
+  transform: translateX(-100%);
+  transition: all 0.3s ease;
+}
+
+.content-name {
+  position: absolute;
+  bottom: 5px;
+  left: 0px;
+  transition: all 0.3s ease;
+}
+
+.loginInput1 input:focus + .label-name .content-name, 
+.loginInput1 input:valid + .label-name .content-name,
+.loginInput2 input:focus + .label-name .content-name, 
+.loginInput2 input:valid + .label-name .content-name {
+  transform: translateY(-150%);
+  font-size:14px; 
+  color: #932626;
+}
+
+.loginInput1 input:focus + .label-name::after,
+.loginInput1 input:valid + .label-name::after,
+.loginInput2 input:focus + .label-name::after,
+.loginInput2 input:valid + .label-name::after {
+  transform: translateX(0%);
+}
+
+.loginInput1,.loginInput2 {
+  margin-top: 0px;
+}
+
+.loginInput2 {
+  margin-bottom: 15px;
+}
+
+
+
+
+
+                        /*Survey page css*/
+/*-------------------------------------------------------------------*/
+
+#qDisplay {
+  margin-top: 100px;
+  margin-left: 300px;
+  height:400px;
+  width: 700px;
+  background:grey;
+  border-radius: 50px;
+}
+
+.note {
+  background-color: grey;
+  text-align: center;
+  color: white;
+  padding-bottom: 5px;
+}
+
+
+
+
+
+/*-------------------------------------------------------------------*/
+/*Index*/
+
+#announceBox {
+  background-color: grey;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 4px;
+  height:300px;
+  color: white;
+
+}
+
+
+
+
+
+
+
